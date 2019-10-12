@@ -1,0 +1,14 @@
+<launch>
+    <node name="track_alvar" pkg ="ar_track_alvar" type="individualMarkersNoKinect" respawn="false" output="screen">
+        <param name="marker_size" value="5.5"/>
+        <param name="max_new_marker_error" value="0.3"/>
+        <param name="max_track_error" value="0.2"/>
+        <param name="output_frame" value="camera_link"/>
+
+
+        <remap from="camera_image" to="/camera/color/image_raw"/>
+        <remap from="camera_info" to="/camera/color/camera_info"/>
+    </node> 
+    <node name="transform_publisher" pkg="calibrate_camera" type="publish_ar_transform.py" output="screen" respawn="false"/>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find calibrate_camera)/config/visualize.rviz"/>
+</launch>
