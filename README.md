@@ -1,5 +1,6 @@
 # ARTags
 The AR Tags package for AIR LAB at WPI
+#### Last Updated: Oct 12th, 2019
 
 ## Setting up
 Install the latest version of librealsense by following instructions on the librealsense repository: [librealsense](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md)
