@@ -10,7 +10,10 @@ Clone ddynamic as well as it is required for the newer versions of realsense-ros
 
 Clone this repository into your catkin workspace and compile. 
 
-Once compiled, source the workspace and connect the Intel RealSense camera and launch the rs_camera launch file
+Once compiled, source the workspace.
+
+## Running ARTags
+Connect the Intel RealSense camera and launch the rs_camera launch file:
 ```
 roslaunch realsense2_camera rs_camera.launch
 ```
